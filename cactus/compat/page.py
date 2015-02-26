@@ -19,7 +19,7 @@ class PageContextCompatibilityPlugin(object):
         def static_url():
             logger.warn("%s:", page.path)
             logger.warn("{{ STATIC_URL }} is deprecated, use {% static '/static/path/to/file' %} instead.")
-            return path_to_url(os.path.join(prefix, 'static'))
+            return path_to_url(os.path.join(prefix, 'static/'))
 
         def root_url():
             logger.warn("%s:", page.path)
